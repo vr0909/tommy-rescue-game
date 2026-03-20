@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue Tommy</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; }
+        .scene { display: none; }
+        #scene1 { display: block; }
+        .active { display: block; }
+        /* Add additional styles for your game here */
+    </style>
+</head>
+<body>
+    <div id="scene1" class="scene">
+        <h1>Welcome to Rescue Tommy!</h1>
+        <button onclick="nextScene(2)">Start Adventure</button>
+    </div>
+    <div id="scene2" class="scene">
+        <h2>Scene 2: The Forest</h2>
+        <p>Help Tommy find his way through the forest...</p>
+        <button onclick="nextScene(3)">Next</button>
+    </div>
+    <div id="scene3" class="scene">
+        <h2>Scene 3: The River</h2>
+        <p>Tommy has to cross the river...</p>
+        <button onclick="nextScene(4)">Next</button>
+    </div>
+    <div id="scene4" class="scene">
+        <h2>Scene 4: The Mountain</h2>
+        <p>Tommy is climbing the mountain...</p>
+        <button onclick="nextScene(5)">Next</button>
+    </div>
+    <div id="scene5" class="scene">
+        <h2>Scene 5: The Cave</h2>
+        <p>Tommy finds a cave...</p>
+        <button onclick="nextScene(6)">Next</button>
+    </div>
+    <div id="scene6" class="scene">
+        <h2>Scene 6: Rescue!</h2>
+        <p>Tommy is rescued! Game Over.</p>
+        <button onclick="restartGame()">Restart</button>
+    </div>
+    <script>
+        function nextScene(sceneNumber) {
+            document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('active'));
+            document.getElementById('scene' + sceneNumber).classList.add('active');
+        }
+
+        function restartGame() {
+            document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('active'));
+            document.getElementById('scene1').classList.add('active');
+        }
+    </script>
+</body>
+</html>
