@@ -1,0 +1,1 @@
+// Swipe navigation component code here

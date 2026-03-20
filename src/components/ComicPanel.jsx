@@ -1,0 +1,1 @@
+// Comic panel display component code here
